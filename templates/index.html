@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Fireball Planet!</title>
+  <title>Fireball!</title>
   <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
@@ -16,7 +16,7 @@
         <br> <button type="button" class="btn btn-danger"> <a href ="/scrape" style="text-decoration : none; color:whitesmoke;"> Scrape New Data </a></button>
         </h1> 
         <div>
-            <h2><b>Latest News</b></h2>
+            <h2>Latest News</h2>
                 
             <h3> {{scrape_dict.latest_title}} </h3>
             <p>
@@ -71,42 +71,54 @@
         
         <div class = "container"> 
         <h3> Faces of Mars </h3>
-
-        <div class = "container text-center">
-            <table> <tbody> 
-            <tr> <td> <img src="https://astrogeology.usgs.gov//cache/images/cfa62af2557222a02478f1fcd781d445_cerberus_enhanced.tif_full.jpg" style="width:300px;" class="img-thumbnail" /> 
+        <div class = "img-responsive center-block">
+            <div>
+            
+        <table> 
+            <tbody> 
+            <tr> 
+                <td> 
+                    <img src="https://astrogeology.usgs.gov//cache/images/cfa62af2557222a02478f1fcd781d445_cerberus_enhanced.tif_full.jpg" style="width:300px;" class="img-thumbnail" /> 
                 
                 <!-- <img src = "{{scrape_dict.cerberus_png}}" /> -->
-                <div class ="text-block">
-                    <h4> Cerberus Hemisphere </h4>
-                </div>
-            
+                    <div class ="text-block">
+                        <h5> Cerberus Hemisphere </h5>
+                    </div>
                 <!-- <img src = "{{scrape_dict.schiaparelli_png}}" /> -->
-            </td> <td> 
-                <img src="https://astrogeology.usgs.gov//cache/images/3cdd1cbf5e0813bba925c9030d13b62e_schiaparelli_enhanced.tif_full.jpg" style="width:300px" class="img-thumbnail"/>
-                <div class = "text-block">
-                    <h4>Schiaparelli Hemisphere</h4>
-                </div>
-            </td></tr>
-            </tbody></table>
+                </td> 
+            
+                <td> 
+                    <img src="https://astrogeology.usgs.gov//cache/images/3cdd1cbf5e0813bba925c9030d13b62e_schiaparelli_enhanced.tif_full.jpg" style="width:300px" class="img-thumbnail"/>
+                    <div class = "text-block">
+                        <h5>Schiaparelli Hemisphere</h5>
+                    </div>
+                </td>
+            <!-- </tbody></table> -->
             <!-- <img src = "{{scrape_dict.syrtis_png}}" /> -->
 
-            <table> <tbody> 
-            <tr> <td><img src = "https://astrogeology.usgs.gov//cache/images/ae209b4e408bb6c3e67b6af38168cf28_syrtis_major_enhanced.tif_full.jpg" style = "width:300px" class="img-thumbnail"/>
-                <div class = "text-block">
-                    <h4>Syrtis Major Hemisphere</h4>
-                </div>
-
+            <!-- <table> <tbody>   -->
+ 
+               <td>
+                    <img src = "https://astrogeology.usgs.gov//cache/images/ae209b4e408bb6c3e67b6af38168cf28_syrtis_major_enhanced.tif_full.jpg" style = "width:300px" class="img-thumbnail"/>
+                    <div class = "text-block">
+                        <h5>Syrtis Major Hemisphere</h5>
+                    </div>
+               </td>
                 <!-- <img src = "{{scrape_dict.valles_png}}" /> -->
-            </td> <td>
-                <img src = "https://astrogeology.usgs.gov//cache/images/7cf2da4bf549ed01c17f206327be4db7_valles_marineris_enhanced.tif_full.jpg" style = "width:300px" class="img-thumbnail"/>        
-                <div class = "text-block">
-                    <h4> Valles Marineris Hemisphere </h4>
-                </div>
-            </td></tr>
-            </tbody></table>
+                <td>
+                    <img src = "https://astrogeology.usgs.gov//cache/images/7cf2da4bf549ed01c17f206327be4db7_valles_marineris_enhanced.tif_full.jpg" style = "width:300px" class="img-thumbnail"/>        
+                    <div class = "text-block">
+                        <h5> Valles Marineris Hemisphere </h5>
+                    </div> 
+            </td>
+            </tr>
+            </tbody>
+        </table>
+
+
         </div>
-        </div>
+    </div>
+    </div>
     </div>
 </div>
 

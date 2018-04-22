@@ -117,19 +117,6 @@ def scrape():
  
     scrape_dict["hemisphere_image_urls"] = hemisphere_image_urls
 
-    #links for faces
-    # face_links_mars = []
-    # for i in scrape_dict["hemisphere_image_urls"]:
-    #     face_links_mars.append(i['img_url'])
-    # mf1 = face_links_mars[0]
-    # scrape_dict["mf1"] = mf1
-    # mf2 = face_links_mars[1]
-    # scrape_dict["mf2"] = mf2
-    # mf3 = face_links_mars[2]
-    # scrape_dict["mf3"] = mf3
-    # mf4 = face_links_mars[3]
-    # scrape_dict["mf4"] = mf4
-
 
     collection.insert_one(scrape_dict)
 

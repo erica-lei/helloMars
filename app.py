@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup as bs
 import requests
 import pandas as pd
 
-
 app = Flask(__name__)
 mongo = PyMongo(app)
 
@@ -25,15 +24,10 @@ def index():
 
 @app.route("/scrape")
 def scrape():
-    scrape_dict = mongo.db.scrape_dict
+    scrape_dict = mongo.db.mars_db
     scraped_data = scrape_mars.scrape()
-    scrape_dict.update(
-        {},
-        scraped_data,
-        upsert=True
-    )
+    scrape_dict.update({},scraped_data,upsert=True)
     return redirect("http://localhost:5000/", code=302)
-
 
 
 if __name__ == "__main__":
