@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fireball Planet!</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1 class="jumbotron" >Mission to Mars
+        <br> <button type="button" class="btn btn-danger"> <a href ="/scrape" style="text-decoration : none; color:whitesmoke;"> Scrape New Data </a></button>
+        </h1> 
+        <div>
+            <h2><b>Latest News</b></h2>
+                
+            <h3> {{scrape_dict.latest_title}} </h3>
+            <p>
+                <h4 class="lead"><i> {{scrape_dict.latest_paragraph}}</i></h4>
+            </p>
+
+            <div class="lead">
+                <p> <br>
+                    <b> Current Weather  </b> <br>
+                            {{scrape_dict.latest_weather}}
+                </p>
+                
+            </div>
+        </div>
+    </div>
+
+<div class="container text-center">
+    <h3> Featured Image </h3>
+    <br> 
+  
+    <img src ="{{scrape_dict.jpl_link}}" style="width:800px;"/>
+   
+</div>
+
+<div class = "container text-center">
+
+    <br>
+    <h3> Things to Know </h3>
+    <table class="table table-hover">
+        <td>Equatorial Diameter:</td> 
+        <td >6,792 km</td> </tr> <tr> 
+        <td>Polar Diameter:</td> 
+        <td>6,752 km</td> </tr> <tr>
+        <td >Mass:</td> 
+        <td>6.42 x 10^23 kg (10.7% Earth)</td> </tr> <tr>
+        <td>Moons:</td> <td>2 (Phobos &amp; Deimos)</td> </tr> <tr>  
+        <td>Orbit Distance:</td> <td>227,943,824 km (1.52 AU)</td> </tr> <tr>
+        <td>Orbit Period:</td> <td>687 days (1.9 years)</td> </tr> <tr> 
+        <td>Surface Temperature:</td> <td>-153 to 20 °C</td> </tr> <tr>
+        <td>First Record:</td> <td>2nd millennium BC</td> </tr> <tr>
+        <td>Recorded By:</td> <td>Egyptian astronomers</td> </tr> </tbody> 
+    </table>
+
+</div>
+
+<div class="container text-center">
+    <div class = "img-responsive">
+
+    
+        
+
+        
+        <div class = "container"> 
+        <h3> Faces of Mars </h3>
+
+        <div class = "container text-center">
+            <table> <tbody> 
+            <tr> <td> <img src="https://astrogeology.usgs.gov//cache/images/cfa62af2557222a02478f1fcd781d445_cerberus_enhanced.tif_full.jpg" style="width:300px;" class="img-thumbnail" /> 
+                
+                <!-- <img src = "{{scrape_dict.cerberus_png}}" /> -->
+                <div class ="text-block">
+                    <h4> Cerberus Hemisphere </h4>
+                </div>
+            
+                <!-- <img src = "{{scrape_dict.schiaparelli_png}}" /> -->
+            </td> <td> 
+                <img src="https://astrogeology.usgs.gov//cache/images/3cdd1cbf5e0813bba925c9030d13b62e_schiaparelli_enhanced.tif_full.jpg" style="width:300px" class="img-thumbnail"/>
+                <div class = "text-block">
+                    <h4>Schiaparelli Hemisphere</h4>
+                </div>
+            </td></tr>
+            </tbody></table>
+            <!-- <img src = "{{scrape_dict.syrtis_png}}" /> -->
+
+            <table> <tbody> 
+            <tr> <td><img src = "https://astrogeology.usgs.gov//cache/images/ae209b4e408bb6c3e67b6af38168cf28_syrtis_major_enhanced.tif_full.jpg" style = "width:300px" class="img-thumbnail"/>
+                <div class = "text-block">
+                    <h4>Syrtis Major Hemisphere</h4>
+                </div>
+
+                <!-- <img src = "{{scrape_dict.valles_png}}" /> -->
+            </td> <td>
+                <img src = "https://astrogeology.usgs.gov//cache/images/7cf2da4bf549ed01c17f206327be4db7_valles_marineris_enhanced.tif_full.jpg" style = "width:300px" class="img-thumbnail"/>        
+                <div class = "text-block">
+                    <h4> Valles Marineris Hemisphere </h4>
+                </div>
+            </td></tr>
+            </tbody></table>
+        </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
