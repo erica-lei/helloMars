@@ -27,7 +27,7 @@ def init_browser():
     executable_path = {"executable_path": path}
     return Browser("chrome", **executable_path, headless=False)
 
-# @app.route("/scrape")
+
 def scrape():
     browser = init_browser()
     scrape_dict = {}
@@ -135,15 +135,11 @@ def scrape():
 
 
     return scrape_dict
-hi = scrape()
-print(hi)
-# @app.route('/')
+
+
 def index():
     mars = list(db.collection.find())
     print(mars)
     return render_template('index.html', mars = mars)
 
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
 
